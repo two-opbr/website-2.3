@@ -78,13 +78,12 @@ const About = () => {
           <div className="max-w-6xl mx-auto mt-16">
             {/* Image at the top */}
             <div className="mb-12 opacity-0 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-dark-card rounded-2xl border border-green/20 p-8 h-80 flex items-center justify-center mx-auto max-w-2xl">
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Camera className="h-12 w-12 text-green" />
-                  </div>
-                  <p className="text-gray-400">Image Placeholder</p>
-                </div>
+              <div className="mx-auto max-w-2xl">
+                <img
+                  src="https://crosslinksnsut.vercel.app/img/CROSSLINKS.jpg"
+                  alt="Crosslinks NSUT"
+                  className="w-full h-80 object-cover rounded-2xl border border-green/20 shadow-lg"
+                />
               </div>
             </div>
             

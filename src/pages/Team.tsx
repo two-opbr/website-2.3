@@ -19,7 +19,7 @@ const Team = () => {
       name: 'Arjun Sharma',
       role: 'President',
       department: 'core',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://crosslinksnsut.vercel.app/img/mithilesh.png',
       bio: 'Leading Crosslinks with vision and passion for storytelling.',
       funFact: 'Has been with Crosslinks for 3 years and organized 50+ events!',
       social: {
@@ -34,7 +34,7 @@ const Team = () => {
       name: 'Priya Patel',
       role: 'Vice President',
       department: 'core',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: 'https://crosslinksnsut.vercel.app/img/akshath.png',
       bio: 'Supporting the vision and managing day-to-day operations.',
       funFact: 'Joined as a photographer and now leads the entire organization!',
       social: {
@@ -111,13 +111,13 @@ const Team = () => {
       name: 'Arjun Sharma',
       role: 'President',
       quote: 'Joining Crosslinks was the best decision of my college life. It helped me grow both personally and professionally.',
-      image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150'
+      image: 'https://crosslinksnsut.vercel.app/img/mithilesh.png'
     },
     {
       name: 'Priya Patel',
       role: 'Vice President',
       quote: 'The skills I learned at Crosslinks directly helped me develop leadership qualities. Forever grateful!',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150'
+      image: 'https://crosslinksnsut.vercel.app/img/akshath.png'
     },
     {
       name: 'Vikram Kumar',
