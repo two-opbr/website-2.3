@@ -75,14 +75,10 @@ const About = () => {
           <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-green">ABOUT US</h1>
           <div className="w-24 h-1 bg-green mx-auto mb-8"></div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto mt-16">
-            <div className="text-left opacity-0 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-              <p className="text-xl lg:text-2xl leading-relaxed text-gray-300">
-                Crosslinks is more than a network — it's a movement. We bring together innovative minds, collaborative projects, and a passion for impact. Our mission is to connect people with ideas, resources, and opportunities that push boundaries and create lasting change.
-              </p>
-            </div>
-            <div className="opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-              <div className="bg-dark-card rounded-2xl border border-green/20 p-8 h-80 flex items-center justify-center">
+          <div className="max-w-6xl mx-auto mt-16">
+            {/* Image at the top */}
+            <div className="mb-12 opacity-0 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-dark-card rounded-2xl border border-green/20 p-8 h-80 flex items-center justify-center mx-auto max-w-2xl">
                 <div className="text-center">
                   <div className="w-24 h-24 bg-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Camera className="h-12 w-12 text-green" />
@@ -90,6 +86,13 @@ const About = () => {
                   <p className="text-gray-400">Image Placeholder</p>
                 </div>
               </div>
+            </div>
+            
+            {/* Text content below the image */}
+            <div className="text-center opacity-0 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+              <p className="text-xl lg:text-2xl leading-relaxed text-gray-300 max-w-4xl mx-auto">
+                Crosslinks is the Student & Public Relations Society of NSUT. It is one of the most well-known societies of our college. It brings to you everything there is to know about NSUT and puts our institution on a national platform. Whether it's about connecting students and authorities together, promoting the college, or organizing numerous events and fests throughout the year, Crosslinks does it all.
+              </p>
             </div>
           </div>
         </div>

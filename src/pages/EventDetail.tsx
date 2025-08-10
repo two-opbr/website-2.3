@@ -5,39 +5,104 @@ import { Calendar, MapPin, Users, ArrowLeft, Camera, Share2 } from 'lucide-react
 const EventDetail = () => {
   const { id } = useParams();
 
-  // In a real app, you'd fetch this data based on the ID
-  const event = {
-    id: '1',
-    title: 'Annual Cultural Fest 2024',
-    date: '2024-03-15',
-    time: '10:00 AM - 8:00 PM',
-    location: 'Main Auditorium & Campus Grounds',
-    description: `The Annual Cultural Fest 2024 is NSUT's biggest celebration of arts, culture, and creativity. This year's theme "Unity in Diversity" brings together students from all departments to showcase their talents through various competitions, performances, and exhibitions.
+  // Sample events data - in a real app, you'd fetch this from an API
+  const eventsData = {
+    '1': {
+      id: '1',
+      title: 'Annual Cultural Fest 2024',
+      date: '2024-03-15',
+      time: '10:00 AM - 8:00 PM',
+      location: 'Main Auditorium & Campus Grounds',
+      description: `The Annual Cultural Fest 2024 is NSUT's biggest celebration of arts, culture, and creativity. This year's theme "Unity in Diversity" brings together students from all departments to showcase their talents through various competitions, performances, and exhibitions.
 
-    The event features multiple stages with live performances, art exhibitions, food stalls, and interactive workshops. Students can participate in dance competitions, music battles, drama performances, and art contests. Special guest performances by renowned artists will be the highlight of the evening.
+      The event features multiple stages with live performances, art exhibitions, food stalls, and interactive workshops. Students can participate in dance competitions, music battles, drama performances, and art contests. Special guest performances by renowned artists will be the highlight of the evening.
 
-    This is not just an event, but a celebration of the vibrant student community at NSUT. Come join us for a day filled with energy, creativity, and unforgettable memories.`,
-    image: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200',
-    attendees: 500,
-    status: 'upcoming',
-    organizers: ['Cultural Committee', 'Student Council', 'Crosslinks Media'],
-    highlights: [
-      'Live performances by 20+ student groups',
-      'Art exhibition featuring 50+ artworks',
-      'Food festival with 15+ cuisines',
-      'Interactive workshops and masterclasses',
-      'Special guest performances',
-      'Photography and videography coverage'
-    ],
-    gallery: [
-      'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400',
-      'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400',
-      'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400',
-      'https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=400',
-      'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=400',
-      'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400'
-    ]
+      This is not just an event, but a celebration of the vibrant student community at NSUT. Come join us for a day filled with energy, creativity, and unforgettable memories.`,
+      image: 'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      attendees: 500,
+      status: 'upcoming',
+      organizers: ['Cultural Committee', 'Student Council', 'Crosslinks Media'],
+      highlights: [
+        'Live performances by 20+ student groups',
+        'Art exhibition featuring 50+ artworks',
+        'Food festival with 15+ cuisines',
+        'Interactive workshops and masterclasses',
+        'Special guest performances',
+        'Photography and videography coverage'
+      ],
+      gallery: [
+        'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ]
+    },
+    '2': {
+      id: '2',
+      title: 'Tech Symposium 2024',
+      date: '2024-02-28',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Conference Hall',
+      description: `The Tech Symposium 2024 is a premier technology event bringing together students, faculty, and industry experts to explore the latest innovations and breakthrough technologies shaping our future.
+
+      This symposium features keynote speeches from renowned tech leaders, interactive workshops on emerging technologies, and networking opportunities with industry professionals. Participants will gain insights into AI, machine learning, blockchain, and other cutting-edge technologies.
+
+      Join us for a day of learning, innovation, and inspiration as we explore the technological landscape of tomorrow.`,
+      image: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      attendees: 300,
+      status: 'upcoming',
+      organizers: ['Tech Committee', 'Computer Science Department', 'Crosslinks Media'],
+      highlights: [
+        'Keynote speeches by industry leaders',
+        'Hands-on workshops on emerging technologies',
+        'Networking sessions with professionals',
+        'Student project showcases',
+        'Panel discussions on tech trends',
+        'Career guidance sessions'
+      ],
+      gallery: [
+        'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1264210/pexels-photo-1264210.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/2422280/pexels-photo-2422280.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ]
+    },
+    '3': {
+      id: '3',
+      title: 'Alumni Meet 2024',
+      date: '2024-04-05',
+      time: '5:00 PM - 10:00 PM',
+      location: 'Alumni Hall',
+      description: `The Alumni Meet 2024 is a special gathering that brings together our graduated students to reconnect with their alma mater and celebrate their achievements in various fields.
+
+      This event provides an opportunity for current students to interact with successful alumni, gain career insights, and build valuable professional networks. Alumni will share their experiences, success stories, and provide guidance to the next generation.
+
+      Join us for an evening of nostalgia, networking, and celebration as we honor our alumni's contributions to society.`,
+      image: 'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1200',
+      attendees: 200,
+      status: 'upcoming',
+      organizers: ['Alumni Committee', 'Student Affairs', 'Crosslinks Media'],
+      highlights: [
+        'Alumni success story presentations',
+        'Networking dinner and reception',
+        'Career guidance sessions',
+        'Campus tour for alumni',
+        'Awards ceremony for distinguished alumni',
+        'Cultural performances by current students'
+      ],
+      gallery: [
+        'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/1181233/pexels-photo-1181233.jpeg?auto=compress&cs=tinysrgb&w=400',
+        'https://images.pexels.com/photos/933255/pexels-photo-933255.jpeg?auto=compress&cs=tinysrgb&w=400'
+      ]
+    }
   };
+
+  // Get the event data based on the ID, fallback to event 1 if not found
+  const event = eventsData[id as keyof typeof eventsData] || eventsData['1'];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
